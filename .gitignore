@@ -1,0 +1,8 @@
+/node_modules
+package-lock.json
+/dist
+#/src/*.js
+/src/*.d.ts
+#src/index.ts
+.DS_Store
+scratch.txt

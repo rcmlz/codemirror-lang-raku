@@ -1,4 +1,7 @@
-// see: https://vquilon.github.io/blog/create-custom-language-on-codemirror-6-and-lezer
+//
+// https://docs.raku.org/language/101-basics
+//
+// see: https://codemirror.net/examples/lang-package/ and https://vquilon.github.io/blog/create-custom-language-on-codemirror-6-and-lezer
 // run: npm run prepare; npm test
 
 @top RakuCode { expression* }
@@ -17,7 +20,6 @@
 
 }
 
-// https://docs.raku.org/language/
 expression {
     Identifier
   | VariableName
