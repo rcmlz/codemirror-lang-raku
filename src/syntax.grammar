@@ -1,0 +1,28 @@
+// see: https://vquilon.github.io/blog/create-custom-language-on-codemirror-6-and-lezer
+// run: npm run prepare; npm test
+
+@top RakuCode { expression* }
+
+@tokens {
+  LineComment { "#" ![\n]* }
+  space { $[ \t\n\r]+ }
+
+  // https://docs.raku.org/language/syntax.html#Identifiers
+  Identifier { "_"? @asciiLetter+ $[a-zA-Z0-9_\-\'\.]*}
+
+  // https://docs.raku.org/language/variables
+  sigil {'$' | '@' | '%' | '&'}
+  twigil {'*' | '?' | '!' | '.' | '<' | '^' | ':' | '=' | '~'}
+  VariableName { (sigil | sigil twigil) Identifier }
+
+}
+
+// https://docs.raku.org/language/
+expression {
+    Identifier
+  | VariableName
+}
+
+@skip { space | LineComment }
+
+@detectDelim

@@ -1,0 +1,38 @@
+# ASCII Identifiers
+
+snakeoil
+somethinglonger
+
+==>
+
+RakuCode(Identifier, Identifier)
+
+# ASCII with numbers Identifiers
+
+withnumbers1234
+with123numbers1234
+
+==>
+
+RakuCode(Identifier, Identifier)
+
+# ASCII+_-.' Identifiers
+
+_snake_oil
+something-longer
+with-numbers1234
+with-numbers.1234
+don't-do-that
+
+==>
+
+RakuCode(Identifier, Identifier, Identifier, Identifier, Identifier)
+
+# Unicode Identifiers
+
+piece_of_π
+駱駝道
+
+==>
+
+RakuCode(Identifier, Identifier)

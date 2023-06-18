@@ -1,0 +1,20 @@
+# Sigil Variables
+
+$one
+@Two_Three
+%two-Three-Three
+&Two.Three
+
+==>
+
+RakuCode(VariableName, VariableName, VariableName, VariableName)
+
+# Twigil Variables
+
+$!one
+@?Two_Three
+$*two-Three-Three
+
+==>
+
+RakuCode(VariableName, VariableName, VariableName)

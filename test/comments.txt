@@ -1,0 +1,9 @@
+# simple comment
+
+#this is a comment
+# this is a comment
+## this is a comment!
+
+==>
+
+RakuCode(LineComment, LineComment, LineComment)
